@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="https://scontent.fccj6-2.fna.fbcdn.net/v/t39.30808-1/313412708_568725785055503_575046663569085273_n.jpg?stp=dst-jpg_s200x200&_nc_cat=103&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=52fU9xPA960Q7kNvgEqjvN4&_nc_ht=scontent.fccj6-2.fna&oh=00_AYAUpgmfOHi7MqmYYWwc1eUq7EhN_Kz8kg6wB1ZWX6vd_A&oe=66FDA7E9">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+  <!-- Bootstrap CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <link href="css/tiny-slider.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <title>Valiyaveettil Furniture</title>
+
+  <style>
+    
+    /* Parallax effect for "Why Choose Us" section */
+	:root {
+    --primary-color: #1e6152;
+    --secondary-color: #666;
+    --dark-bg: rgba(0, 0, 0, 0.5);
+    --light-bg: #f9f9f9;
+    --white-color: #fff;
+    --text-black: #333;
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: var(--text-black);
+}
+
+.parallax {
+    background-image: url('images/about.jpeg'); /* Replace with your image path */
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax-overlay {
+    background-color: var(--dark-bg);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.parallax .section-title {
+    color: white;
+    z-index: 1;
+}
+
+.parallax p {
+    color: white;
+    z-index: 1;
+    margin-left: -40%;
+    margin-top: -20px;
+}
+
+.parallax h2 {
+    font-size: 4rem;
+    margin-top: 60px;
+    font-family: 'Papyrus';
+}
+
+/* Responsive for tablets and smaller devices */
+@media screen and (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll; /* Disable fixed background on smaller screens */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .parallax h2 {
+        font-size: 3rem; /* Reduce font size */
+        margin-top: 40px;
+    }
+
+    .parallax p {
+        margin-left: 0; /* Center text on smaller screens */
+        margin-top: 10px;
+        font-size: 1rem; /* Adjust font size */
+    }
+}
+
+/* Responsive for mobile phones */
+@media screen and (max-width: 480px) {
+    .parallax {
+        background-attachment: scroll; /* Parallax fixed background might not work on mobile, so scroll instead */
+        height: 200px; /* Reduce height for mobile */
+    }
+
+    .parallax h2 {
+        font-size: 2rem; /* Further reduce font size */
+        margin-top: 20px;
+    }
+
+    .parallax p {
+        font-size: 0.9rem;
+        margin-top: 5px;
+        margin-left: 0;
+        text-align: center; /* Center text on mobile */
+    }
+}
+.why-choose-content {
+    position: relative;
+    z-index: 2;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features-section {
+    padding: 100px 20px; /* Added horizontal padding for mobile */
+    background-color: var(--light-bg);
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to next line on smaller screens */
+    justify-content: center; /* Center the cards */
+}
+
+.feature-item {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: bounceIn 1s forwards; /* Bounce-in effect */
+    flex: 0 1 calc(33.333% - 20px); /* Each card takes up 1/3 of the row with some margin */
+    margin: 10px; /* Margin between cards */
+}
+
+.feature-item:nth-child(1) { animation-delay: 0.3s; }
+.feature-item:nth-child(2) { animation-delay: 0.6s; }
+.feature-item:nth-child(3) { animation-delay: 0.9s; }
+
+.feature-img img {
+    width: 100%; /* Full width for responsive images */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.feature-img img:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    from { opacity: 0; transform: scale(0); }
+    60% { opacity: 1; transform: scale(1.1); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .features-section {
+        padding: 60px 20px; /* Reduced padding for smaller screens */
+    }
+    .feature-item {
+        flex: 0 1 calc(50% - 20px); /* 2 cards in a row for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .features-section {
+        padding: 40px 10px; /* Further reduced padding for mobile */
+    }
+    .feature-item {
+        flex: 0 1 100%; /* 1 card in a row for small screens */
+        margin-bottom: 15px; /* Less spacing on mobile */
+    }
+}
+
+.about-us-section,
+.mission-section {
+    padding: 100px 0;
+}
+
+.about-us-section {
+    background-color: var(--light-bg);
+	margin-bottom: -150px;
+}
+
+.about-us-section h3 {
+    font-size: 24px;
+    color: rgb(156, 39, 45);
+    margin-top: 40px;
+    font-family: 'papyrus';
+}
+
+.about-us-section p {
+    margin-top: 40px;
+    color: black;
+}
+
+.mission-section {
+    background-color: #ffffff; /* Background for Mission */
+}
+
+.mission-section h3 {
+    color: black;
+    font-family: 'LorealShiloneSerif', serif;
+}
+
+.about-img img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.mission-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: -100px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .parallax h2 {
+        margin-left: 20px; /* Adjusted for smaller screens */
+        font-size: 2.5rem; /* Responsive font size */
+    }
+    .section-title {
+        font-size: 28px; /* Smaller title size */
+    }
+}
+
+.feature-img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px; /* Space between image and text */
+}
+.features-section h3{
+	color: black;
+}
+
+
+.animate-title,
+.animate-text,
+.animate-img,
+.animate-content,
+.animate-feature {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.animate-title {
+  animation: fadeInUp 1s forwards; /* Animation for title */
+}
+
+.animate-text {
+  animation: fadeInUp 1s forwards; /* Animation for paragraph text */
+  animation-delay: 0.3s; /* Delay for text */
+}
+
+.animate-img,
+.animate-content {
+  animation: fadeInUp 1s forwards; /* Animation for images and content */
+}
+
+.animate-img {
+  animation-delay: 0.6s; /* Delay for About Us image */
+}
+
+.animate-content {
+  animation-delay: 0.9s; /* Delay for content */
+}
+
+.animate-feature {
+  animation: fadeInUp 1s forwards; /* Animation for feature items */
+}
+
+.animate-feature:nth-child(1) {
+  animation-delay: 1s; /* Delay for first feature */
+}
+
+.animate-feature:nth-child(2) {
+  animation-delay: 1.2s; /* Delay for second feature */
+}
+
+.animate-feature:nth-child(3) {
+  animation-delay: 1.4s; /* Delay for third feature */
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Start Header/Navigation -->
+  <nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Valiyaveettil Furniture Ltd<span>.</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsFurni">
+        <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li><a class="nav-link" href="shop.html">Shop</a></li>
+          <li class="active"><a class="nav-link" href="about.html">About us</a></li>
+          <li><a class="nav-link" href="services.html">Services</a></li>
+          <li><a class="nav-link" href="contact.html">Contact us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- End Header/Navigation -->
+
+  <!-- Start Hero Section -->
+   <!-- Start Hero Section -->
+<div class="hero">
+	<div class="container">
+	  <div class="row justify-content-between">
+		<div class="col-lg-5">
+		  <div class="intro-excerpt">
+			<h1>About Us</h1>
+			<p class="mb-4">With years of experience and a deep understanding of design, Valiyaveettil Furniture is your trusted partner in home furnishings. We blend modern trends with timeless craftsmanship to offer you furniture that elevates any space</p>
+		    <p><a href="tel:09567820027" class="btn btn-secondary me-2">Contact Now</a></p>
+		  </div>
+		</div>
+		<div class="col-lg-7 position-relative"> <!-- Added position-relative for absolute positioning -->
+		  <div class="hero-img-wrap images"> <!-- Added 'images' class to wrap the image -->
+			<div class="imagegroup"> <!-- Added 'imagegroup' to wrap the two images -->
+			  <img src="images/couch.png" id="couch" class="img-fluid" alt="Couch"> <!-- First image -->
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- End Hero Section -->
+   
+ 
+    <!-- Start About Us Section -->
+<section class="about-us-section">
+	<div class="container">
+	  <h2 class="section-title text-center animate-title">About Us</h2>
+	  <div class="row align-items-center">
+		<div class="col-lg-6">
+		  <div class="about-img animate-img">
+			<img src="images/2018-01-26-removebg-preview.png" alt="About Us" class="img-fluid">
+		  </div>
+		</div>
+		<div class="col-lg-6">
+		  <div class="about-content animate-content">
+			<h3>About Our Company</h3>
+			<p>Valiyaveettil Furnishers P Ltd, located on State Highway 1 in Kottayam, Kerala, offers a comprehensive selection of furniture for living rooms, bedrooms, and offices. They cater to interior design needs, transforming your house into a beautiful and functional space. Home delivery is available for customers in Pala, Kottayam, Ettumanoor, and nearby areas.</p>
+
+		</div>
+	  </div>
+	</div>
+  </section>
+  <!-- End About Us Section -->
+  
+	  <!-- Features Section -->
+	  <div class="features-section">
+		<h2 class="section-title text-center animate-title">Our Features</h2>
+		<div class="row">
+		  <div class="col-lg-4 col-md-6 mb-4 feature-item animate-feature">
+			<div class="feature-content">
+			  <img src="images/furni (1).jpeg" alt="Quality Craftsmanship" class="img-fluid feature-img">
+			  <h3>Quality Craftsmanship</h3>
+			  <p>We use the finest materials to ensure durability and elegance in our furniture.</p>
+			</div>
+		  </div>
+		  <div class="col-lg-4 col-md-6 mb-4 feature-item animate-feature">
+			<div class="feature-content">
+			  <img src="images/furni (2).jpeg" alt="Custom Designs" class="img-fluid feature-img">
+			  <h3>Custom Designs</h3>
+			  <p>Our team offers personalized designs to fit your unique style and space.</p>
+			</div>
+		  </div>
+		  <div class="col-lg-4 col-md-6 mb-4 feature-item animate-feature">
+			<div class="feature-content">
+			  <img src="images/furni (3).jpeg" alt="Eco-Friendly Options" class="img-fluid feature-img">
+			  <h3>Eco-Friendly Options</h3>
+			  <p>We prioritize sustainability with eco-friendly  materials and practices.</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <!-- End About Us Section -->
+  
+  <!-- Start Mission Section -->
+  <section class="mission-section">
+	<div class="container">
+	  <h2 class="section-title text-center animate-title">Our Mission</h2>
+	  <div class="row">
+		<div class="col-lg-6">
+		  <div class="mission-img animate-img">
+			<img src="images/product4.png" alt="Our Mission" class="img-fluid">
+		  </div>
+		</div>
+		<div class="col-lg-6">
+		  <div class="mission-content animate-content">
+			<h3>Our Commitment</h3>
+			<p>We are committed to delivering top-notch products and exceptional service to ensure customer satisfaction.</p>
+			<p>Our aim is to innovate and continuously improve our offerings to provide the best solutions for our clients.</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+  <!-- End Mission Section -->
+  <!-- End Why Choose Us Section -->
+  <div class="parallax">
+    <div class="parallax-overlay"></div>
+    <div class="why-choose-content">
+      <h2 class="section-title">Transforming   Spaces</h2>
+      <p>Discover the benefits of choosing Valiyaveettil Furniture for your home.</p>
+    </div>
+  </div>
+
+
+   <!-- Start Footer Section -->
+   <footer class="footer-section">
+	<div class="container relative">
+
+		<div class="sofa-img">
+			<img src="images/sofa.png" alt="Image" class="img-fluid">
+		</div>
+
+		<div class="row">
+			<div class="col-lg-8">
+				<div class="subscription-form">
+					<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+					<form action="#" class="row g-3">
+						<div class="col-auto">
+							<input type="text" class="form-control" placeholder="Enter your name">
+						</div>
+						<div class="col-auto">
+							<input type="email" class="form-control" placeholder="Enter your email">
+						</div>
+						<div class="col-auto">
+							<button class="btn btn-primary">
+								<span class="fa fa-paper-plane"></span>
+							</button>
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="row g-5 mb-5">
+			<div class="col-lg-4">
+				<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Valiyaveettil<span>.</span></a></div>
+				<p class="mb-4">At Valiyaveettil Furniture, elevate your home with our stylish, high-quality pieces. Discover comfort and craftsmanship designed for every lifestyle. Transform your space today!</p>
+
+				<ul class="list-unstyled custom-social">
+					<li><a href="https://www.facebook.com/valiyaveettilfurnisher/"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+					<li><a href="tel:09567820027"><span class="fa-solid fa-phone"></span></a></li>
+					<li><a href="https://maps.app.goo.gl/n2GVKRvwPtqF5so49" target="_blank"><span class="fa-solid fa-location-dot"></span></a></li>
+				</ul>
+			</div>
+
+			<div class="col-lg-8">
+				<div class="row links-wrap">
+					<div class="col-6 col-sm-6 col-md-3">
+						<ul class="list-unstyled">
+							<li><a href="#">About us</a></li>
+							<li><a href="#">Services</a></li>
+							<li><a href="#">Blog</a></li>
+							<li><a href="#">Contact us</a></li>
+						</ul>
+					</div>
+
+					
+
+					<div class="col-6 col-sm-6 col-md-3">
+						<ul class="list-unstyled">
+							<li><a href="#">Jobs</a></li>
+							<li><a href="#">Our team</a></li>
+							<li><a href="#">Leadership</a></li>
+							<li><a href="#">Privacy Policy</a></li>
+						</ul>
+					</div>
+
+					
+				</div>
+			</div>
+
+		</div>
+
+		<div class="border-top copyright">
+			<div class="row pt-4">
+				<div class="col-lg-6">
+					<p class="mb-2 text-center text-lg-start">Copyright  &copy;<script>document.write(new Date().getFullYear());</script> Valiyaveettil Furniture Ltd.All Rights Reserved. &mdash; Designed with love by KEE ADS Advertising Agency <a href="https://keeads.com/">KEE ADS</a> </p>
+
+				</div>
+
+				<div class="col-lg-6 text-center text-lg-end">
+					<ul class="list-unstyled d-inline-flex ms-auto">
+						<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+						<li><a href="#">Privacy Policy</a></li>
+					</ul>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</footer>
+  <!-- End Footer Section -->
+</body>
+</html>

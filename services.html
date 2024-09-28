@@ -1,0 +1,553 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Untree.co">
+  <link rel="shortcut icon" href="https://scontent.fccj6-2.fna.fbcdn.net/v/t39.30808-1/313412708_568725785055503_575046663569085273_n.jpg?stp=dst-jpg_s200x200&_nc_cat=103&ccb=1-7&_nc_sid=f4b9fd&_nc_ohc=52fU9xPA960Q7kNvgEqjvN4&_nc_ht=scontent.fccj6-2.fna&oh=00_AYAUpgmfOHi7MqmYYWwc1eUq7EhN_Kz8kg6wB1ZWX6vd_A&oe=66FDA7E9">
+
+  <meta name="description" content="" />
+  <meta name="keywords" content="bootstrap, bootstrap4" />
+
+		<!-- Bootstrap CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<link href="css/tiny-slider.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<title>Valiyaveettil Furniture </title>
+		<style>
+			/* Section Titles */
+			:root {
+    --primary-color: #1e6152;
+    --secondary-color: #666;
+    --dark-bg: rgba(0, 0, 0, 0.5);
+    --light-bg: #f9f9f9;
+    --white-color: #fff;
+    --text-black: #333;
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-black);
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6; /* Improves readability */
+}
+
+/* Feature Titles */
+.feature h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: black;
+    margin-top: 10px;
+}
+
+/* Feature Descriptions */
+.feature p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Parallax Section */
+.parallax .about-us-content p {
+    font-size: 1rem;
+    color: #f5f5f5;
+}
+
+.parallax .about-us-content h2 {
+    color: white;
+    font-family: 'Papyrus', cursive; /* Added fallback */
+}
+
+/* Icon Descriptions */
+.icon img {
+    max-width: 18%;
+    height: auto;
+}
+
+/* Product Section Title */
+.product-section h2 {
+    font-family: 'Papyrus', cursive; /* Added fallback */
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.col-4 {
+  flex: 0 0 33.33%; /* 3 items per row by default */
+  max-width: 33.33%;
+}
+
+.feature {
+  text-align: center;
+  padding: 20px;
+ 
+  border-radius: 10px;
+ 
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-5px); /* A little lift on hover */
+}
+
+.icon img {
+  max-width: 80px; /* Adjust image size as needed */
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 1rem;
+  color: black;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .col-4 {
+    flex: 0 0 100%; /* 1 item per row on smaller screens */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 1.3rem; /* Adjusted font size for smaller screens */
+  }
+
+  p {
+    font-size: 0.9rem; /* Adjust text size for mobile */
+  }
+
+  .icon img {
+    max-width: 70px; /* Slightly smaller icon on smaller screens */
+  }
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem; /* Smaller title size */
+    }
+    p {
+        font-size: 0.95rem; /* Adjust paragraph size */
+    }
+    .feature h3 {
+        font-size: 1.1rem; /* Smaller feature title */
+    }
+    .feature p {
+        font-size: 0.85rem; /* Smaller feature description */
+    }
+    .parallax .about-us-content h2 {
+        font-size: 2rem; /* Responsive font size */
+    }
+}
+
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 1.75rem; /* Further reduced title size */
+    }
+    p {
+        font-size: 0.9rem; /* Further adjust paragraph size */
+    }
+    .feature h3 {
+        font-size: 1rem; /* Further smaller feature title */
+    }
+    .feature p {
+        font-size: 0.8rem; /* Further smaller feature description */
+    }
+    .parallax .about-us-content h2 {
+        font-size: 1.5rem; /* Responsive font size */
+    }
+}
+		</style>
+	</head>
+
+	<body>
+
+		<!-- Start Header/Navigation -->
+		<nav class="custom-navbar navbar navbar navbar-expand-md navbar-dark bg-dark" arial-label="Furni navigation bar">
+
+			<div class="container">
+				<a class="navbar-brand" href="index.html">Valiyaveettil Furniture Ltd<span>.</span></a>
+
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsFurni" aria-controls="navbarsFurni" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div class="collapse navbar-collapse" id="navbarsFurni">
+					<ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
+						<li class="nav-item">
+							<a class="nav-link" href="index.html">Home</a>
+						</li>
+						<li><a class="nav-link" href="shop.html">Shop</a></li>
+						<li><a class="nav-link" href="about.html">About us</a></li>
+						<li class="active"><a class="nav-link" href="services.html">Services</a></li>
+						<li><a class="nav-link" href="contact.html">Contact us</a></li>
+					</ul>
+
+					
+				</div>
+			</div>
+				
+		</nav>
+		<!-- End Header/Navigation -->
+
+		<!-- Start Hero Section -->
+			<div class="hero">
+				<div class="container">
+					<div class="row justify-content-between">
+						<div class="col-lg-5">
+							<div class="intro-excerpt">
+								<h1>Services</h1>
+								<p class="mb-4">From custom furniture designs to expert delivery and installation, Valiyaveettil Furniture is dedicated to making your home furnishing experience smooth and enjoyable. Let us handle the details while you enjoy your new space</p>
+								<p><a href="tel:09567820027" class="btn btn-secondary me-2">Contact Now</a></p>
+							</div>
+						</div>
+						<div class="col-lg-7">
+							<div class="hero-img-wrap">
+								<img src="images/couch.png" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<!-- End Hero Section -->
+
+		
+
+		<!-- Start Why Choose Us Section -->
+		<div class="why-choose-section">
+			<div class="container">
+				<div class="row justify-content-between align-items-center">
+					<div class="col-lg-6">
+						<h2 class="section-title">Why Choose Us</h2>
+						<p>We provide high-quality, stylish furniture at affordable prices. Our friendly team is dedicated to helping you find the perfect pieces for your home. Enjoy a simple and satisfying shopping experience with us!</p>
+						<div class="row my-5">
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/truck.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Delivery Policy</h3>
+									<p>Local delivery available with fees and times based on location. We’ll coordinate a convenient delivery time for you.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/bag.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Expert Craftsmanship</h3>
+									<p>Every piece is designed with care and attention to detail, providing stylish and functional solutions for your home.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/support.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Personalized Service</h3>
+									<p>Visit our store and receive personalized advice from our knowledgeable team to help you find the perfect furniture.</p>
+								</div>
+							</div>
+
+							<div class="col-6 col-md-6">
+								<div class="feature">
+									<div class="icon">
+										<img src="images/return.svg" alt="Image" class="imf-fluid">
+									</div>
+									<h3>Return Policy</h3>
+									<p>Return items within 14 days in original condition with proof of purchase for a refund or exchange.</p>
+								</div>
+							</div>
+							
+
+						</div>
+					</div>
+
+					<div class="col-lg-5">
+						<div class="img-wrap">
+							<img src="images/cover.jpeg" alt="Image" class="img-fluid">
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- End Why Choose Us Section -->
+
+    
+    <!-- Start About Us Section with Parallax -->
+<div class="parallax about-us">
+    <div class="parallax-overlay"></div>
+    <div class="container about-us-content">
+        <div class="row justify-content-between align-items-center">
+            <div class="col-lg-12">
+                <h2 class="section-title">Our Mission and Vision</h2>
+                <p>At valiyaveettil Furniture, our mission is to create beautiful and functional spaces for our customers. We believe that furniture should not only enhance the aesthetics of a home but also provide comfort and utility.</p>
+                <p>Our vision is to become the leading furniture store in the community, known for our commitment to quality, innovation, and exceptional customer service. We strive to offer products that reflect modern living and cater to diverse lifestyles.</p>
+
+                <div class="row my-5">
+                   
+
+                    <div class="col-4 col-md-4">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="images/icon (3).png" alt="Image" class="img-fluid">
+                            </div>
+                            <h3>Value for Money</h3>
+                            <p>We offer competitive pricing without compromising on quality, ensuring great value for every purchase.</p>
+                        </div>
+                    </div>
+					<div class="col-4 col-md-4">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="images/innova.png" alt="Image" class="img-fluid">
+                            </div>
+                            <h3>Innovative Solutions</h3>
+                            <p>Our team continuously researches trends and technologies to provide innovative furniture solutions.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 col-md-4">
+                        <div class="feature">
+                            <div class="icon">
+                                <img src="images/icon (2).png" alt="Image" class="img-fluid">
+                            </div>
+                            <h3>Customer Satisfaction</h3>
+                            <p>Your satisfaction is our priority, and we go the extra mile to ensure you have a positive experience.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+		<!-- Start Product Section -->
+		<div class="product-section pt-0">
+			<div class="container">
+				<div class="row">
+
+					<!-- Start Column 1 -->
+					<div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
+						<h2 class="mb-4 section-title">Crafted with excellent material.</h2>
+						<p class="mb-4">Made from high-quality hardwood, this furniture combines durability and elegance. Its beautiful grain adds charm, ensuring long-lasting beauty and functionality for any space </p>
+						
+					</div> 
+					<!-- End Column 1 -->
+
+					<!-- Start Column 2 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="#">
+							<img src="data:image/jpeg;base64,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" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Teak</h3>
+							
+							<span class="icon-cross">
+								<img src="images/wood.png" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 2 -->
+
+					<!-- Start Column 3 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="#">
+							<img src="data:image/jpeg;base64,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" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Oak</h3>
+							
+							<span class="icon-cross">
+								<img src="images/wood.png" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 3 -->
+
+					
+					<!-- Start Column 4 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="#">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReiYl2FWxpw04qoHxfxSGUXBvfAFxXxJX4sA&s" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Maple</h3>
+							
+							<span class="icon-cross">
+								<img src="images/wood.png" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 3 -->
+					<!-- End Column 4 -->
+					 <!-- Start Column 4 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="#">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqE-1tM_aWbOsREIl3oxdDOFtTSKQ9cJr3cg&s" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Mahogany</h3>
+							
+							<span class="icon-cross">
+								<img src="images/wood.png" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 2 -->
+                    <!-- Start Column 2 -->
+					<!-- Start Column 4 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="#">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOGDRRIM5-sTgmvN5BJFh5jQSVNKPsnDbAhA&s" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Pine</h3>
+							
+							<span class="icon-cross">
+								<img src="images/wood.png" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 2 -->
+                    <!-- Start Column 2 -->
+					<!-- Start Column 4 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="#">
+							<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXbmxfEJFbdDcpJH_OdfPOTVuYrjpCKTZHLQ&s" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Walnut</h3>
+							
+							<span class="icon-cross">
+								<img src="images/wood.png" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 2 -->
+					 <!-- Start Column 2 -->
+					<!-- Start Column 4 -->
+					<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0">
+						<a class="product-item" href="#">
+							<img src="data:image/jpeg;base64,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" class="img-fluid product-thumbnail">
+							<h3 class="product-title">Cherry</h3>
+							
+							<span class="icon-cross">
+								<img src="images/wood.png" class="img-fluid">
+							</span>
+						</a>
+					</div>
+					<!-- End Column 2 -->
+                    
+
+				</div>
+			</div>
+		</div>
+		<!-- End Product Section -->
+->
+
+		
+
+		<!-- Start Footer Section -->
+		<footer class="footer-section">
+			<div class="container relative">
+
+				<div class="sofa-img">
+					<img src="images/sofa.png" alt="Image" class="img-fluid">
+				</div>
+
+				<div class="row">
+					<div class="col-lg-8">
+						<div class="subscription-form">
+							<h3 class="d-flex align-items-center"><span class="me-1"><img src="images/envelope-outline.svg" alt="Image" class="img-fluid"></span><span>Subscribe to Newsletter</span></h3>
+
+							<form action="#" class="row g-3">
+								<div class="col-auto">
+									<input type="text" class="form-control" placeholder="Enter your name">
+								</div>
+								<div class="col-auto">
+									<input type="email" class="form-control" placeholder="Enter your email">
+								</div>
+								<div class="col-auto">
+									<button class="btn btn-primary">
+										<span class="fa fa-paper-plane"></span>
+									</button>
+								</div>
+							</form>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="row g-5 mb-5">
+					<div class="col-lg-4">
+						<div class="mb-4 footer-logo-wrap"><a href="#" class="footer-logo">Valiyaveettil Furniture Ltd<span>.</span></a></div>
+						<p class="mb-4">At Valiyaveettil Furniture, elevate your home with our stylish, high-quality pieces. Discover comfort and craftsmanship designed for every lifestyle. Transform your space today!</p>
+
+						<ul class="list-unstyled custom-social">
+							<li><a href="https://www.facebook.com/valiyaveettilfurnisher/"><span class="fa fa-brands fa-facebook-f"></span></a></li>
+							<li><a href="tel:09567820027"><span class="fa-solid fa-phone"></span></a></li>
+                            <li><a href="https://maps.app.goo.gl/n2GVKRvwPtqF5so49" target="_blank"><span class="fa-solid fa-location-dot"></span></a></li>
+						</ul>
+					</div>
+
+					<div class="col-lg-8">
+						<div class="row links-wrap">
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">About us</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Blog</a></li>
+									<li><a href="#">Contact us</a></li>
+								</ul>
+							</div>
+
+							
+
+							<div class="col-6 col-sm-6 col-md-3">
+								<ul class="list-unstyled">
+									<li><a href="#">Jobs</a></li>
+									<li><a href="#">Our team</a></li>
+									<li><a href="#">Leadership</a></li>
+									<li><a href="#">Privacy Policy</a></li>
+								</ul>
+							</div>
+
+							
+						</div>
+					</div>
+
+				</div>
+
+				<div class="border-top copyright">
+					<div class="row pt-4">
+						<div class="col-lg-6">
+							<p class="mb-2 text-center text-lg-start">Copyright  &copy;<script>document.write(new Date().getFullYear());</script> Valiyaveettil Furniture Ltd.All Rights Reserved. &mdash; Designed with love by KEE ADS Advertising Agency <a href="https://keeads.com/">KEE ADS</a> </p>
+						</div>
+
+						<div class="col-lg-6 text-center text-lg-end">
+							<ul class="list-unstyled d-inline-flex ms-auto">
+								<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
+								<li><a href="#">Privacy Policy</a></li>
+							</ul>
+						</div>
+
+					</div>
+				</div>
+
+			</div>
+		</footer>
+		<!-- End Footer Section -->	
+
+
+		<script src="js/bootstrap.bundle.min.js"></script>
+		<script src="js/tiny-slider.js"></script>
+		<script src="js/custom.js"></script>
+	</body>
+
+</html>
