@@ -33,6 +33,9 @@
   font-style: normal;
 }
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+*{
+  box-sizing: border-box;
+}
 body {
   overflow-x: hidden;
   position: relative; }
@@ -43,8 +46,29 @@ body {
   line-height: 28px;
   color: #6a6a6a;
   font-size: 14px;
-  background-color: #eff2f1; }
+  background-color: #eff2f1;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+ }
+ @media screen and (max-width: 768px) {
+  body {
+      font-size: 13px;
+      line-height: 26px;
+      padding: 10px;
+  }
+  
+  /* Any additional container or layout adjustments for tablet */
+}
+@media screen and (max-width: 480px) {
+  body {
+      font-size: 12px;
+      line-height: 24px;
+      padding: 5px;
+  }
 
+  /* Add further adjustments for mobile responsiveness if necessary */
+}
 a {
   text-decoration: none;
   -webkit-transition: .3s all ease;
@@ -729,18 +753,18 @@ a {
 
 /* Parallax Background Style */
 .parallax-background {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('../images/blur.webp'); /* Replace with your image */
+  background-image: url('../images/home.jpeg'); /* Replace with your image */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   transform: translate(0);
   background-size: cover;
-  z-index: -1;
+
 }
 @media (max-width: 768px) {
   .parallax-background{
@@ -760,7 +784,7 @@ a {
   font-size: 18px;
   font-family: 'Papyrus', cursive; /* Use a fallback font */
   font-weight: bold;
-  color: black;
+  color: white;
   margin-bottom: 30px;
   margin-left: -7%;
 }
