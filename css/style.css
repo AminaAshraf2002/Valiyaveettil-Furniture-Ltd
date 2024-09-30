@@ -953,6 +953,7 @@ a {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap */
     justify-content: space-between; /* Space out the cards */
+    margin-top: 0px;
   }
   
   .blog-section .post-entry {
@@ -1004,6 +1005,23 @@ a {
   .blog-section h2 {
     color: #000000;
   }
+  /* Responsive adjustments */
+@media (max-width: 768px) {
+  .blog-section {
+      margin-top: -210px; /* Decreased margin-top for smaller screens */
+      margin-bottom: -150px;
+  }
+
+  .blog-card {
+      flex: 1 1 100%; /* Stack cards on small screens */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1200px) {
+  .blog-card {
+      flex: 1 1 45%; /* Two cards per row */
+  }
+}
   
   /* Responsive Styles */
   @media (max-width: 768px) {
