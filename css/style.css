@@ -36,10 +36,10 @@
 *{
   box-sizing: border-box;
 }
+
 body {
   overflow-x: hidden;
   position: relative; }
-
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -54,8 +54,7 @@ body {
  @media screen and (max-width: 768px) {
   body {
       font-size: 13px;
-      line-height: 26px;
-      padding: 10px;
+      line-height: 26px;    
   }
   
   /* Any additional container or layout adjustments for tablet */
@@ -64,7 +63,7 @@ body {
   body {
       font-size: 12px;
       line-height: 24px;
-      padding: 5px;
+      
   }
 
   /* Add further adjustments for mobile responsiveness if necessary */
@@ -217,14 +216,13 @@ a {
           right: 0px;
           z-index: 2;
           max-width: 100%; /* Ensure image is fully responsive */
-          left: -20px;
+          left: 0px; /* Keep image within bounds */
         }
         
         /* Tablet (min-width: 768px) */
         @media (min-width: 768px) {
           .hero .hero-img-wrap img {
-            right: 0px;
-            left: -100px;
+            left: -60px; /* Slight shift for larger screens */
           }
         }
         
@@ -237,6 +235,7 @@ a {
             right: -50px;
           }
         }
+       
         
         /* Dots background styling */
         .hero .hero-img-wrap:after {
@@ -259,29 +258,29 @@ a {
         }
         
         /* Mobile (max-width: 767px) */
-        @media (max-width: 767px) {
+        @media (max-width: 768px) {
           .hero {
-            padding: 3rem 0; /* Adjusted for better mobile view */
+            padding: 2rem 0; /* Reduced padding for mobile */
           }
-        
           .hero h1 {
-            font-size: 1.8rem; /* Adjust font size for mobile */
+            font-size: 1.5rem; /* Smaller font size for mobile */
           }
-        
           .hero p {
-            font-size: 1rem; /* Adjust paragraph font size */
+            font-size: 0.9rem; /* Adjust text size for readability */
           }
-        
-          .hero .hero-img-wrap img {
-            left: 0px; /* Make the image fit better on small screens */
-            max-width: 100%; /* Ensure image remains responsive */
+        }
+       
+        @media (min-width: 992px) {
+          .hero .intro-excerpt {
+            max-width: 500px; /* Increase width for better text flow */
           }
-        
+        }
+        @media (max-width: 767px) {
           .hero .hero-img-wrap:after {
-            width: 150px;
-            height: 120px;
+            width: 100px;
+            height: 90px;
             top: 0;
-            right: -50px;
+            right: -20px; /* Adjust right for better positioning */
           }
         }
         .btn {
@@ -347,12 +346,11 @@ a {
         /* Mobile specific styling */
         @media (max-width: 768px) {
           .btn {
-            padding: 10px 20px; /* Reduced padding for mobile */
-            font-size: 14px; /* Smaller font size on mobile for readability */
-            width: 50%; /* Full width buttons for smaller screens */
-            border-radius: 25px; /* Adjusted border-radius for mobile */
+            width: 60%; /* Full-width buttons for smaller screens */
+            padding: 12px 25px; /* Slight padding adjustment */
           }
         }
+        
 .section-title {
   color: #2f2f2f; }
 /* 2 */
@@ -476,24 +474,25 @@ a {
       width: 30px;
       height: 30px; /* Slightly smaller for mobile */
     }
+    
   }
-/* Why Choose Section */
+/* Why Choose Section 3 */
 .why-choose-section {
   padding: 7rem 0;
   display: flex;
-  flex-direction: column; /* Stack elements on small screens */
-  align-items: center; /* Center content */
+  flex-direction: column;
+  align-items: center;
   margin-top: -90px;
 }
 
-/* Image Wrapper */
-.why-choose-section .img-wrap {
-  position: relative; 
-  width: 100%; /* Make the image wrap full width */
-  max-width: 500px; /* Limit max width on larger screens */
+.img-wrap {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
-.why-choose-section .img-wrap:before {
+.img-wrap:before {
   position: absolute;
   content: "";
   width: 255px;
@@ -502,75 +501,84 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   transform: translate(-40%, -40%);
-  z-index: -1; /* Behind the image */
+  z-index: -1;
 }
 
-/* Image Style */
-.why-choose-section .img-wrap img {
-  width: 100%; /* Responsive image */
-  border-radius: 20px; /* Rounded corners */
-  display: block; /* Prevents bottom space */
+.img-wrap img {
+  width: 100%;
+  border-radius: 20px;
+  display: block;
 }
 
-/* Heading and Paragraph */
+.feature {
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.feature .icon img {
+  max-width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
 .why-choose-section h2, 
 .why-choose-section p {
-  color: #000000;
-  text-align: center; /* Center text on all screens */
-  margin: 1rem 0; /* Add margin for spacing */
+  color: #000;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 /* Responsive Design */
-
-/* Tablet and Large Mobile Devices */
 @media (max-width: 992px) {
   .why-choose-section {
-    padding: 5rem 0; /* Less padding for smaller screens */
+    padding: 5rem 0;
   }
 
-  .why-choose-section .img-wrap:before {
-    width: 200px; /* Adjust the dots size */
-    height: 170px; /* Adjust the dots size */
+  .img-wrap:before {
+    width: 200px;
+    height: 170px;
   }
 }
 
-/* Mobile Devices */
 @media (max-width: 768px) {
   .why-choose-section {
-    padding: 4rem 0; /* Further reduce padding */
+    padding: 4rem 0;
   }
 
-  .why-choose-section .img-wrap:before {
-    width: 150px; /* Adjust the dots size */
-    height: 130px; /* Adjust the dots size */
+  .img-wrap:before {
+    width: 150px;
+    height: 130px;
   }
 
   .why-choose-section h2 {
-    font-size: 24px; /* Smaller font size for heading */
+    font-size: 24px;
   }
 
   .why-choose-section p {
-    font-size: 16px; /* Smaller font size for paragraph */
+    font-size: 16px;
   }
 }
 
-/* Small Mobile Devices */
 @media (max-width: 576px) {
   .why-choose-section {
-    padding: 3rem 0; /* Minimal padding for very small screens */
+    padding: 3rem 0;
   }
 
-  .why-choose-section .img-wrap:before {
-    width: 120px; /* Adjust the dots size */
-    height: 100px; /* Adjust the dots size */
+  .img-wrap:before {
+    width: 120px;
+    height: 100px;
   }
 
   .why-choose-section h2 {
-    font-size: 20px; /* Smaller font size for heading */
+    font-size: 20px;
   }
 
   .why-choose-section p {
-    font-size: 14px; /* Smaller font size for paragraph */
+    font-size: 14px;
+  }
+
+  .feature {
+    margin-bottom: 1.5rem;
   }
 }
 /* Section Heading */
